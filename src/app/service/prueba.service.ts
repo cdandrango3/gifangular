@@ -55,7 +55,7 @@ export class PruebaService {
       .subscribe((data) => {
         this.gifData = this.gifData.filter((item) => item.id !== datagif.id);
         
-      },(err: any) => alert('Error al eliminar el gif'));
+      });
   }
   get getGifData(): Dataexamen[] {
     return this.gifData;
