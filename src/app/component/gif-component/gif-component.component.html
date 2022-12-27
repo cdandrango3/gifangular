@@ -1,0 +1,26 @@
+<app-giffinder></app-giffinder>
+<div class="container">
+<div class="row justify-content-center align-items-center g-2">
+    <div class="col"></div>
+    <div class="col">
+        <ng-container *ngIf="pruebaService.getGifData.length == 0" >
+            <div>
+            
+                <h1>No hay gifs</h1>
+            </div>
+        </ng-container>
+        <ng-container *ngFor="let gif of pruebaService.getGifData " >
+            <div class="card">
+                <img class="card-img-top" [src]="gif.url" alt="Title">
+                
+            </div>
+            <div class="float float-center">
+                <Button (click)="eliminar(gif.id)" class=" m-5 btn btn-danger">
+                Eliminar
+            </Button> </div>  
+        </ng-container>
+         
+    </div>
+    <div class="col"></div>
+</div>
+</div>
