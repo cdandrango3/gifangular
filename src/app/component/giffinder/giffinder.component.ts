@@ -11,8 +11,9 @@ export class GiffinderComponent {
 
  }
 addGif() {
-  if(this.gifUrl == "" || this.gifUrl == null) {
+  if(this.gifUrl == "" || this.gifUrl == null || this.gifUrl.match(/^(http(s?):)([/|.|\w|\s|-])*\.(?:gif)/g) == null) {
     alert ("No se puede agregar un gif vacio");
+    this.gifUrl = "";
   }
   else{
   this.pruebaservice.saveGif(this.gifUrl);

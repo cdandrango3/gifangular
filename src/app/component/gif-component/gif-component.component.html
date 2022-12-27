@@ -2,7 +2,7 @@
 <div class="container">
 <div class="row justify-content-center align-items-center g-2">
     <div class="col"></div>
-    <div class="col">
+    <div class="col-lg-4 col-sm-6 col-12">
         <ng-container *ngIf="pruebaService.getGifData.length == 0" >
             <div>
             
@@ -14,10 +14,15 @@
                 <img class="card-img-top" [src]="gif.url" alt="Title">
                 
             </div>
-            <div class="float float-center">
-                <Button (click)="eliminar(gif.id)" class=" m-5 btn btn-danger">
-                Eliminar
-            </Button> </div>  
+            <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <Button (click)="eliminar(gif.id)" class=" m-5 btn btn-danger">
+                        Eliminar
+                    </Button> 
+                </div>
+                <div class="col"></div>
+                </div>  
         </ng-container>
          
     </div>
